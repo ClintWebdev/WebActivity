@@ -31,18 +31,37 @@ gap: 1rem;
    color: #F8EAD8;
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   justify-content: space-around;
    padding: 1rem;
    font-size: 1rem;
  
   }
+  .header img{
+    width: 3rem;
+  }
 
   .main { grid-area: 2 / 2 / 8 / 6;
     background-color: var(--lightC3);
-    margin-right: 1rem;
+    margin-right: 9rem;
     padding: 2rem;
     font-family: 'Roboto', sans-serif;
  
+}
+aside{
+ 
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  height: 70vh;
+  width: 7rem;
+  z-index: 1;
+  background-color: lightblue;
+  padding: .5rem;
+}
+
+aside li{
+  list-style-type:none;
+  margin-top: 1rem;
 }
 .container{
   display: grid;
@@ -186,7 +205,7 @@ padding-left: 2rem;
     color: #cecece;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (min-width: 700px) {
     .container .info{
       font-size:.7rem;
       
@@ -195,5 +214,44 @@ padding-left: 2rem;
       font-size:.8rem;
       
      
+    }
+  }
+  @media only screen and (max-width: 700px){
+    .main{
+      font-size: .7rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      
+    }
+    .info>*,.desription>*{
+      font-size: .7rem;
+    }
+  }
+
+  @media only screen and (max-width: 500px){
+    .parent{
+      display: flex;
+      flex-direction: column;
+    }
+    aside{
+      position: unset;
+      width: 90%;
+      height: 15rem;
+      font-size: .8rem;
+      padding: 1rem;
+      margin: auto;
+    }
+    .main{
+      width: 90%;
+      margin:unset;
+      margin: 0 auto;
+      
+    }
+    .nav{
+     
+      width: 90%;
+      margin: auto;
+      
     }
   }
